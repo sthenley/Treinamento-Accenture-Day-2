@@ -8,6 +8,7 @@
 * Bianca Nunes do Nascimento Bourguignon Bigossi :rocket:
 * Aleff Diego Trajano Diniz :rocket:
 * Luciano Luiz Romero  :rocket:
+* Giselle Cristina Marques Lemes :rocket:
 ******
 Desafio
 CASE TÉCNICO
