@@ -1,6 +1,6 @@
 # Treinamento-Accenture-Day-2
  *****
- Equipe 22 
+ Equipe 22  :shamrock:
  ****
  Integrantes 
 * Bruno Valentino Caetano Silva
