@@ -1,12 +1,349 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinamento </title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Academia Accenture - Grupo 22, Teclado T9</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+  
+  <style id="compiled-css" type="text/css">
+body {
+  background: #fff;
+}
+
+#phone button {
+  height: 30px;
+  width: 30px;
+}
+
+#phone button span {
+  display: block;
+  margin-top: 1px;
+  font-size: 9px;
+}
+
+#result {
+  width: 160px;
+  height: 25px;
+  margin-left: 2px;
+}
+
+.key {
+  background-color: #646a69; 
+  border: none;
+  color: white;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 9px;
+  text-align:center;
+  font-weight: bold;
+  border-radius: 3px 6px 4px; 
+}
+/* EOS */
+  </style>
+
+  <script id="insert"></script>
+    <script src="stringify.js" charset="utf-8"></script>
+    <script>
+      const customConsole = (w) => {
+        const pushToConsole = (payload, type) => {
+          w.parent.postMessage({
+            console: {
+              payload: stringify(payload),
+              type:    type
+            }
+          }, "*")
+        }
+
+        w.onerror = (message, url, line, column) => {
+          // the line needs to correspond with the editor panel
+          // unfortunately this number needs to be altered every time this view is changed
+          line = line - 70
+          if (line < 0){
+            pushToConsole(message, "error")
+          } else {
+            pushToConsole(`[${line}:${column}] ${message}`, "error")
+          }
+        }
+
+        let console = (function(systemConsole){
+          return {
+            log: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "log")
+              systemConsole.log.apply(this, args)
+            },
+            info: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "info")
+              systemConsole.info.apply(this, args)
+            },
+            warn: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "warn")
+              systemConsole.warn.apply(this, args)
+            },
+            error: function(){
+              let args = Array.from(arguments)
+              pushToConsole(args, "error")
+              systemConsole.error.apply(this, args)
+            },
+            system: function(arg){
+              pushToConsole(arg, "system")
+            },
+            clear: function(arg){
+              systemConsole.clear.apply(this, args)
+            },
+            time: function(arg){
+              systemConsole.time.apply(this, args)
+            },
+            assert: function(arg){
+              systemConsole.assert.apply(this, args)
+            },
+            dir: function(arg){
+              systemConsole.dir.apply(this, args)
+            }
+          }
+        }(window.console))
+
+        window.console = console
+
+        console.system("Running fiddle")
+      }
+
+      if (window.parent){
+        customConsole(window)
+      }
+    </script>
 </head>
 <body>
-    <p> Treinamento  </p>
-    
+
+  <h1>&nbsp;&nbsp;<a href="https://github.com/lucianoromero/Treinamento-Accenture-Day-2">Grupo 22</a></h1>
+
+    <table id="phone" background="bgnokia.png" width="214" height="486" border="0">
+  <tr height="130">
+           <td colspan="5" height="130">&nbsp;</td>
+   </tr>
+        
+  <tr height="90">
+    <td colspan="5" height="90" align="center">
+      <!-- <input type="text" id="result" /> -->
+      <input type="textarea" id="result" minlength="70" maxlength="70" style="width: 80px; height: 60px; border: 2px; background-color: #398e6f;" />
+    </td>
+  </tr>
+  <tr height="90">
+    <td colspan="5" height="90">&nbsp;</td>
+</tr>
+  <tr><td rowspan="4" width="25">&nbsp;</td>
+    <td style="text-align:center; background-color: transparent;">
+      <button data-value="1" class="key">1
+        <span>. , !</span>
+      </button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="2" class="key">2
+        <span>a b c</span>
+      </button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="3" class="key">3
+        <span>d e f</span>
+      </button>
+    </td>
+    <td rowspan="4" width="25">&nbsp;</td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      <button data-value="4" class="key">4
+        <span>g h i</span>
+      </button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="5" class="key">5
+        <span>j k l</span>
+      </button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="6" class="key">6
+        <span>m n o</span>
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      <button data-value="7" class="key">7
+        <span>p q r s</span>
+      </button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="8" class="key">8
+        <span>t u v</span>
+      </button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="9" class="key">9
+        <span>w x y z</span>
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:center">
+      <button data-value="*" class="key">*</button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="0" class="key">0</button>
+    </td>
+    <td style="text-align:center">
+      <button data-value="#" class="key">#</button>
+    </td>
+  </tr>
+  <tr height="22">
+    <td colspan="5" height="22">&nbsp;</td>
+</tr>
+</table>
+
+
+    <script type="text/javascript">//<![CDATA[
+
+
+var lastUpdate = {
+  counter: -1
+};
+
+$(document).ready(function() {
+  var longPress = {};
+  var resultArea = $("#result");
+  $("#phone").find("button")
+    .mouseup(function(event) {
+      var button_pressed = $(event.currentTarget).data("value");
+      if (longPress.is) {
+        resultArea.val(resultArea.val() + button_pressed);
+        longPress = {};
+      } else {        
+        resultArea.val(t9(resultArea.val(), button_pressed));
+      }
+      clearTimeout(longPress.timer);
+    })
+    .mousedown(function(event) {
+      longPress.timer = setTimeout(function() {
+        longPress.is = true;
+      }, 500);
+    });
+})
+
+function t9(text, button_pressed) {
+  var toEmbedText = '';
+  var currentTime = Date.now();
+  var toEmbedText = getEmbedText(button_pressed);
+  var shouldChange = function() {
+    return lastUpdate.now && currentTime - lastUpdate.now < 500 && lastUpdate.button_pressed === button_pressed && !isNonAlpha(button_pressed);
+  }
+  if (shouldChange()) {
+    text = text.slice(0, -1);
+    if ((lastUpdate.counter && lastUpdate.counter > 3) || !toEmbedText[lastUpdate.counter]) {
+      lastUpdate.counter = -1;
+    }
+    lastUpdate.counter++;
+  } else {
+    lastUpdate.counter = 0;
+  }
+
+  lastUpdate.now = currentTime;
+  lastUpdate.button_pressed = button_pressed;
+
+  return (text + (toEmbedText[lastUpdate.counter] || toEmbedText[0]));
+}
+
+// Sets based on pressed button 
+// instead of directly fetching from dom
+function getEmbedText(button_pressed) {
+  var toEmbedText;
+  switch (button_pressed) {
+    case 1:
+      toEmbedText = '.,!';
+      break;
+    case 2:
+      toEmbedText = 'abc';
+      break;
+    case 3:
+      toEmbedText = 'def';
+      break;
+    case 4:
+      toEmbedText = 'ghi';
+      break;
+    case 5:
+      toEmbedText = 'jkl';
+      break;
+    case 6:
+      toEmbedText = 'mno';
+      break;
+    case 7:
+      toEmbedText = 'pqrs';
+      break;
+    case 8:
+      toEmbedText = 'tuv';
+      break;
+    case 9:
+      toEmbedText = 'wxyz';
+      break;
+    case '*':
+      toEmbedText = '*';
+      break;
+    case 0:
+      toEmbedText = '0';
+      break;
+    case '#':
+      toEmbedText = '#';
+      break;
+  }
+  return toEmbedText;
+}
+
+function isNonAlpha(button_pressed) {
+  return button_pressed === '*' || button_pressed === 0 || button_pressed === '#';
+}
+
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "s6k69wmq"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+    <script>
+      let allLines = []
+
+      window.addEventListener("message", (message) => {
+        if (message.data.console){
+          let insert = document.querySelector("#insert")
+          allLines.push(message.data.console.payload)
+          insert.innerHTML = allLines.join(";\r")
+
+          let result = eval.call(null, message.data.console.payload)
+          if (result !== undefined){
+            console.log(result)
+          }
+        }
+      })
+    </script>
+
+&nbsp;&nbsp;Código: 2 222 222 33 66 8 88 777 33<BR />
+&nbsp;&nbsp;Resposta: accenture
+
 </body>
 </html>
