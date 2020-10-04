@@ -2,12 +2,12 @@
  *****
  Equipe 22  :shamrock:
  ****
- Integrantes 
-* Bruno Valentino Caetano Silva
-* Johnny Wesley da Silva Santo
-* Bianca Nunes do Nascimento Bourguignon Bigossi
-* Aleff Diego Trajano Diniz
-* Luciano Luiz Romero 
+ Integrantes :trophy:
+* Bruno Valentino Caetano Silva   :rocket:
+* Johnny Wesley da Silva Santo   :rocket:
+* Bianca Nunes do Nascimento Bourguignon Bigossi :rocket:
+* Aleff Diego Trajano Diniz :rocket:
+* Luciano Luiz Romero  :rocket:
 ******
 Desafio
 CASE TÉCNICO
@@ -34,7 +34,7 @@ Orientações Gerais:
 - Executivos da Accenture passarão de grupo em grupo para ver como vocês estão se organizando e avaliá-los, então mostrem seu potencial, sejam participativos, engajados e dominem esse desafio com sabedoria!
 - Vocês terão até 3 minutos para apresentar para a banca com executivos da Accenture, às 19h, a aplicação funcionando, isso é, vocês digitando no front os números e aparecendo no visor a palavra solicitada.
 ****
-Tecnologias utilizadas para o resolução do problema 
+Tecnologias utilizadas para o resolução do problema :technologist:
 * Html 
 * Css
 * Java Script
