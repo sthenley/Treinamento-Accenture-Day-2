@@ -9,6 +9,7 @@
 * Aleff Diego Trajano Diniz :rocket:
 * Luciano Luiz Romero  :rocket:
 * Giselle Cristina Marques Lemes :rocket:
+* Sthenley Macedo :rocket:
 ******
 Desafio
 CASE TÉCNICO
