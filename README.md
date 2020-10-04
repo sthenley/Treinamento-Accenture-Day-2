@@ -41,4 +41,4 @@ Tecnologias utilizadas para o resolução do problema :technologist:
 * Css
 * Java Script
 
-[Acesse aqui](https://github.com/sthenley/Treinamento-Accenture-Day-2/blob/master/index.html)
+[Acesse aqui](http://sthenley.com/accenture)
